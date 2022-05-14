@@ -34,9 +34,9 @@ namespace Algorithm
                         BubbleSort ob1 = new BubbleSort();
                         int[] arr1 = { 64, 34, 25, 12, 22, 11, 90 };
                         Console.WriteLine("unsorted values ");
-                        Console.WriteLine(String.Join(" ", arr1));
+                        ob1.printArray(arr1);
+                        //Console.WriteLine(String.Join(" ", arr1));
                         ob1.bubbleSort(arr1);
-
                         Console.WriteLine("Sorted values");
                         ob1.printArray(arr1);
                         break;
