@@ -13,7 +13,7 @@ namespace Algorithm
         {
             while (true)
             {
-                Console.WriteLine("select no\n1)insertion sort\n2)Bubble sort\n3)Binary Search");
+                Console.WriteLine("select no\n1)insertion sort\n2)Bubble sort\n3)Binary Search\n4)Anagram Words");
 
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -42,8 +42,7 @@ namespace Algorithm
                     case 3:
                         BinarySearch bs = new();
                         string[] arr2 = { "apple", "ball", "cat", "dog", "egg", "fish" };
-                        bs.printBinarystring(arr2);
-                        
+                        bs.printBinarystring(arr2);                       
                         Console.WriteLine("Please enter a string to be searched :");
                         string key = Console.ReadLine();
                         int result = bs.binary_search_Method(arr2, key);
@@ -54,8 +53,25 @@ namespace Algorithm
                                             + "index " + result);
                         Console.WriteLine(result);
                         break;
+                    case 4:
+                        string firstString, secondString;                     
+                        Console.WriteLine("Enter first string");
+                        firstString = Console.ReadLine();
+                        Console.WriteLine("Enter second string");
+                        secondString = Console.ReadLine();
+                        Anagram anagram = new Anagram();                         
+                        if (anagram.areAnagram(firstString, secondString) == true)
+                        {
+                            Console.WriteLine("Both string are anagram string.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Both string are not anagram string.");
+                        }
+                        Console.ReadLine();
+                        break;
                 }
+            }
             }
         }
     }
-}
