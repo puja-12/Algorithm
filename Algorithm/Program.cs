@@ -9,11 +9,11 @@ namespace Algorithm
 {
     class program
     {
-        public static void Main()
+        public static void Main(string[] args)
         {
             while (true)
             {
-                Console.WriteLine("select no\n1)insertion sort\n2)Bubble sort\n3)Binary Search\n4)Anagram Words\n5)Prime Numbers");
+                Console.WriteLine("select no\n1)insertion sort\n2)Bubble sort\n3)Binary Search\n4)Anagram Words\n5)Prime Numbers\n6)bubbleSort using generics");
 
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -42,7 +42,7 @@ namespace Algorithm
                     case 3:
                         BinarySearch bs = new();
                         string[] arr2 = { "apple", "ball", "cat", "dog", "egg", "fish" };
-                        bs.printBinarystring(arr2);                       
+                        bs.printBinarystring(arr2);
                         Console.WriteLine("Please enter a string to be searched :");
                         string key = Console.ReadLine();
                         int result = bs.binary_search_Method(arr2, key);
@@ -54,12 +54,12 @@ namespace Algorithm
                         Console.WriteLine(result);
                         break;
                     case 4:
-                        string firstString, secondString;                     
+                        string firstString, secondString;
                         Console.WriteLine("Enter first string");
                         firstString = Console.ReadLine();
                         Console.WriteLine("Enter second string");
                         secondString = Console.ReadLine();
-                        Anagram anagram = new Anagram();                         
+                        Anagram anagram = new Anagram();
                         if (anagram.areAnagram(firstString, secondString) == true)
                         {
                             Console.WriteLine("Both string are anagram string.");
@@ -74,8 +74,21 @@ namespace Algorithm
                         PrimeNumber primeNumbers = new PrimeNumber();
                         primeNumbers.primeNumber();
                         break;
+                    case 6:
+                        BubbleSortGeneric<int> Sorter = new();
+                        int[] array = { 64, 34, 25, 12, 22, 11, 90 };
+                        Console.WriteLine("unsorted values ");
+                        Sorter.printArray(array);
+                        Sorter.bubbleSort(array);
+                        Console.WriteLine("sorted values ");
+                        Sorter.printArray(array);
+
+
+
+                        break;
                 }
             }
             }
+
         }
     }
