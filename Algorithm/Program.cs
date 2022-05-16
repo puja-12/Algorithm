@@ -13,7 +13,7 @@ namespace Algorithm
         {
             while (true)
             {
-                Console.WriteLine("select no\n1)insertion sort\n2)Bubble sort\n");
+                Console.WriteLine("select no\n1)insertion sort\n2)Bubble sort\n3)Binary Search");
 
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -35,10 +35,24 @@ namespace Algorithm
                         int[] arr1 = { 64, 34, 25, 12, 22, 11, 90 };
                         Console.WriteLine("unsorted values ");
                         ob1.printArray(arr1);
-                        //Console.WriteLine(String.Join(" ", arr1));
                         ob1.bubbleSort(arr1);
                         Console.WriteLine("Sorted values");
                         ob1.printArray(arr1);
+                        break;
+                    case 3:
+                        BinarySearch bs = new();
+                        string[] arr2 = { "apple", "ball", "cat", "dog", "egg", "fish" };
+                        bs.printBinarystring(arr2);
+                        Array.Sort(arr2);
+                        Console.WriteLine("Please enter a string to be searched :");
+                        string key = Console.ReadLine();
+                        int result = bs.binary_search_Method(arr2, key);
+                        if (result == -1)
+                            Console.WriteLine("Element not present");
+                        else
+                            Console.WriteLine("Element found at "
+                                            + "index " + result);
+                        Console.WriteLine(result);
                         break;
                 }
             }
