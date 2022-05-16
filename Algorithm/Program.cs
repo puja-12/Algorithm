@@ -13,7 +13,7 @@ namespace Algorithm
         {
             while (true)
             {
-                Console.WriteLine("select no\n1)insertion sort\n2)Bubble sort\n3)Binary Search\n4)Anagram Words\n5)Prime Numbers\n6)bubbleSort using generics\n7)binary Search using generics");
+                Console.WriteLine("select no\n1)insertion sort\n2)Bubble sort\n3)Binary Search\n4)Anagram Words\n5)Prime Numbers\n6)bubbleSort using generics\n7)binary Search using generics\n8)Merge Sort");
 
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -97,10 +97,20 @@ namespace Algorithm
                                             + "index " + result1);
                         Console.WriteLine(result1);
                         break;
-                        
+                    case 8:
+                        MergeSort merge = new MergeSort();
+
+                        int[] numbers = { 3, 8, 7, 5, 2, 1, 9, 6, 4 };
+                        int len = 9;
+                        Console.WriteLine("MergeSort :");
+                        merge.sortmethod(numbers, 0, len - 1);
+                        for (int i = 0; i < 9; i++)
+                            Console.WriteLine(numbers[i]);
+                        Console.Read();
+                        break;
                 }
             }
-            }
+        }
 
         }
     }
