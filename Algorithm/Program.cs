@@ -43,7 +43,7 @@ namespace Algorithm
                         BinarySearch bs = new();
                         string[] arr2 = { "apple", "ball", "cat", "dog", "egg", "fish" };
                         bs.printBinarystring(arr2);
-                        Array.Sort(arr2);
+                        
                         Console.WriteLine("Please enter a string to be searched :");
                         string key = Console.ReadLine();
                         int result = bs.binary_search_Method(arr2, key);
