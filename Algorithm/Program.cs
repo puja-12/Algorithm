@@ -13,7 +13,7 @@ namespace Algorithm
         {
             while (true)
             {
-                Console.WriteLine("select no\n1)insertion sort\n2)Bubble sort\n3)Binary Search\n4)Anagram Words");
+                Console.WriteLine("select no\n1)insertion sort\n2)Bubble sort\n3)Binary Search\n4)Anagram Words\n5)Prime Numbers");
 
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -69,6 +69,10 @@ namespace Algorithm
                             Console.WriteLine("Both string are not anagram string.");
                         }
                         Console.ReadLine();
+                        break;
+                    case 5:
+                        PrimeNumber primeNumbers = new PrimeNumber();
+                        primeNumbers.primeNumber();
                         break;
                 }
             }
