@@ -13,7 +13,7 @@ namespace Algorithm
         {
             while (true)
             {
-                Console.WriteLine("select no\n1)insertion sort\n2)Bubble sort\n3)Binary Search\n4)Anagram Words\n5)Prime Numbers\n6)bubbleSort using generics");
+                Console.WriteLine("select no\n1)insertion sort\n2)Bubble sort\n3)Binary Search\n4)Anagram Words\n5)Prime Numbers\n6)bubbleSort using generics\n7)binary Search using generics");
 
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -82,10 +82,22 @@ namespace Algorithm
                         Sorter.bubbleSort(array);
                         Console.WriteLine("sorted values ");
                         Sorter.printArray(array);
-
-
-
                         break;
+                    case 7:
+                        BinarySearchGenerics<string> sorter2 = new();
+                        string[] array2 = { "apple", "ball", "cat", "dog", "egg", "fish" };
+                        sorter2.printBinary(array2);
+                        Console.WriteLine("Please enter a string to be searched :");
+                        string val = Console.ReadLine();
+                        int result1 = sorter2.binarySearch(array2, val);
+                        if (result1 == -1)
+                            Console.WriteLine("Element not present");
+                        else
+                            Console.WriteLine("Element found at "
+                                            + "index " + result1);
+                        Console.WriteLine(result1);
+                        break;
+                        
                 }
             }
             }
