@@ -13,7 +13,7 @@ namespace Algorithm
         {
             while (true)
             {
-                Console.WriteLine("select no\n1)insertion sort\n2)Bubble sort\n3)Binary Search\n4)Anagram Words\n5)Prime Numbers\n6)bubbleSort using generics\n7)binary Search using generics\n8)Merge Sort");
+                Console.WriteLine("select no\n1)insertion sort\n2)Bubble sort\n3)Binary Search\n4)Anagram Words\n5)Prime Numbers\n6)bubbleSort using generics\n7)binary Search using generics\n8)Merge Sort\n9)permutatuins");
 
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -108,6 +108,14 @@ namespace Algorithm
                             Console.WriteLine(numbers[i]);
                         Console.Read();
                         break;
+                    case 9:
+
+                        string str = "ABC";
+                        char[] charArry = str.ToCharArray();
+                        permutation.Permute(charArry, 0, 2);
+                        Console.ReadKey();
+                        break;
+
                 }
             }
         }
